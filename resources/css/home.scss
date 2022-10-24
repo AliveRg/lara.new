@@ -1,0 +1,65 @@
+
+body {
+    background-color: #E5E5E5;
+    background-size: 100vh;
+    font-family: 'PT Sans';
+}
+
+.main__wrapper {
+    padding: 70px 0px 0px 0px;
+}
+
+.slider {
+    background-image: url(/images/bg_menu.png);
+}
+
+.title {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc((1vw + 1vh) * 1);
+    line-height: 44px;    
+    letter-spacing: 0.04em;
+    color: #B9B9B9;
+}
+.sub__title {
+    font-family: 'PT Sans';
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc((1vw + 1vh) * 2.2);
+    line-height: 83px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #2BA4A4; 
+    box-sizing: content-box;
+
+    .hr-line {
+        display: inline;
+        width: 45px;
+        font-size: 45px;
+        margin: 0px 30px 0px 30px;
+        opacity: 0.4;
+        transform: rotate(90deg);
+    }
+    span {
+        font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc((1vw + 1vh) * 2.2);
+    line-height: 83px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #404040;
+    }
+}
+
+.card__list {
+display: flex;
+flex-flow: row wrap;
+// margin-left: -30px;
+justify-content: space-between;
+
+}

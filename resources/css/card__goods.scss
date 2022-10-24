@@ -1,0 +1,72 @@
+.cadr {
+    width: 262px;
+    margin: 0 0 30px 0px;
+    position: relative;
+    height: 414px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+}
+.card__favorite {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+}
+.card__content {
+    padding: 30px;
+}
+.card__goods-img {
+    max-width: 208px;
+    padding-bottom: 20px;
+    img {
+        width: 100%;
+    }
+}
+.card__goods-info {
+    // font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #DD2729;
+    padding-bottom: 15px;
+
+span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #2BA4A4;
+}
+}
+.card__goods-name {
+
+    a {
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: #404040;
+    }
+}
+.card__line {
+    margin: 20px 0px 20px 0px;
+    opacity: 0.4;
+}
+.card__goods-prise {
+    display: flex;
+    align-items: center;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    color: #404040;
+}
+.hr-line {
+    width: 25px;
+    transform: rotate(90deg);
+}
