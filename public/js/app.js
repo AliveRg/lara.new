@@ -11937,6 +11937,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  var selectSorting = document.querySelector('.select');
+  var selectOpenOption = document.querySelector('.select__body');
+  var selectCurrent = document.querySelector('.select__current');
+  selectSorting.addEventListener('click', function (event) {
+    var target = event.target;
+
+    function bodySelectActive() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".select__body").toggleClass("active");
+    }
+
+    if (target.classList.contains('select__current', 'select__icon')) {
+      bodySelectActive();
+    }
+
+    if (target.classList.contains('select__item')) {
+      var text = target.innerText;
+      selectCurrent.innerText = text;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".select__body").removeClass("active");
+    }
+  });
+});
 
 /***/ }),
 

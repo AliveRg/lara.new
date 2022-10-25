@@ -319,12 +319,12 @@
             Собственное производство, Кемма, ABC, TERCA , Донские зори</p>
     </div>
     <hr class="hr-line-filters">
-    <div class="filters__name">
+    <div class="filters__name filters_name-column">
         <p>Кирпичи со скидкой <br>
             Кирпичи оптом</p>
         <hr class="hr-line-filters">
     </div>
-    <div class="filters__name">
+    <div class="filters__name filters_name-column">
         <span class="name__info">Другие страны</span>
         <p>Кирпичи в Украине</p>
     </div>

@@ -65,6 +65,7 @@ $(function () {
         $(".show__more").toggleClass("active");
         $(".show__less").toggleClass("active");
     });
+
 })
 
 
@@ -111,8 +112,6 @@ formFilter.addEventListener('click', event => {
         }, 3000)
     }
 
-
-
     // formData[target.name] = target.value;
     // LocalStorage.setItem('formData', JSON.stringify(formData))
     // if (LocalStorage.getItem('formData')) {
@@ -139,6 +138,44 @@ formFilter.addEventListener('click', event => {
 
     });
 });
+
+document.addEventListener('DOMContentLoaded', function (){
+
+
+    const selectSorting = document.querySelector('.select')
+    const selectOpenOption = document.querySelector('.select__body')
+    const selectCurrent = document.querySelector('.select__current')
+
+
+    selectSorting.addEventListener('click', (event) => {
+        const target = event.target;
+        function bodySelectActive () {
+            $(".select__body").toggleClass("active");
+        }
+
+
+
+        if (target.classList.contains('select__current', 'select__icon')) {
+            bodySelectActive()
+        }
+        if (target.classList.contains('select__item')) {
+            let text = target.innerText;
+            selectCurrent.innerText = text;
+            $(".select__body").removeClass("active");
+
+        }
+    })
+
+});
+
+
+
+
+
+
+
+
+
 
 
 

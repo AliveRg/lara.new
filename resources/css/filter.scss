@@ -69,37 +69,62 @@
     margin-right: 5px;
 }
 
-.sorting__goods, option {
-    display: flex;
-    align-items: center;
-    border: none;
-    padding: 7.5px 9px;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: #404040;
-    cursor: pointer;
-    transition: all .2s;
-}
-option {
-    font-weight: 500;
-
-}
-
-.sorting__goods::after {
-    content: "";
-    background-image: url(/images/down-arrow.png);
-    width: 13px;
-    height: 13px;
-    background-size: 100%;
-    display: inline-block;
-    margin: 0 0 2px 5px;
-    transform: rotate(90deg);
+.select {
     position: relative;
-    top: 1px;
+    width: 200px;
+    background-color: #fff;
+    .select__header {
+        border: 1px solid #ababab;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+        cursor: pointer;
+        display: flex;
+
+        .select__current {
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            @extend %font-stile-bolt;
+        }
+
+        .select__icon {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            flex-shrink: 0;
+            justify-content: center;
+            height: 40px;
+            text-align: center;
+            width: 40px;
+        }
+    }
+
+    .select__body {
+        background-color: #fff;
+        border:  1px solid #ababab;
+        border-top: 0;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        height: 60px;
+
+        .select__item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding-left: 8px;
+            @extend %font-stile-bolt;
+            height: 50%;
+        }
+        .select__item:hover {
+            background-color: #eae9e9;
+        }
+    }
+    .select__body.active {
+        display: block;
+    }
 }
 
 .filters__type {
@@ -111,19 +136,13 @@ option {
         align-items: center;
         justify-content: center;
         margin-left: 20px;
-        width: 100px;
+        width: 90px;
         height: 30px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
         background: #fff;
         transition: all 0.2s;
         a {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 18px;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #000;
+          @extend %font-style-italic;
         }
     }
 

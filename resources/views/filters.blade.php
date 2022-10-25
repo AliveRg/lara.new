@@ -18,10 +18,18 @@
                     <div class="sorting__title">
                         Сортировать:
                     </div>
-                    <select class="sorting__goods">
-                        <option selected value="" >По возрастанию цены:</option>
-                        <option value="">По убыванию цены:</option>
-                    </select>
+
+                    <div class="select">
+                        <div class="select__header">
+                            <span class="select__current">по возрастанию цены</span>
+                            <div class="select__icon">&times;</div>
+                        </div>
+
+                        <div class="select__body">
+                            <div class="select__item">по возрастанию цены</div>
+                            <div class="select__item">по убыванию цены</div>
+                        </div>
+                    </div>
                     <div class="filters__type">
                         <div class="filters__type-menu"><a href="">Хит продаж</a></div>
                         <div class="filters__type-menu"><a href="">Новинки</a></div>
