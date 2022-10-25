@@ -1,0 +1,139 @@
+footer {
+    margin-top: 70px;
+}
+
+.footer__wrapper {
+    width: 100%;
+    max-height: 570px;
+    box-sizing: content-box;
+    background: #323232;
+    margin: 0 auto;
+}
+
+.footer__inner {
+    display: flex;
+    padding: 70px 0px; 
+    // padding-top: 70px; 
+}
+
+.footer__logo {
+    margin-right: 9px;
+}
+.footer__info-company {
+    // width: 150px;
+    margin: 0px 79px;
+    p {
+        margin-bottom: 20px;
+        a {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        }
+    }
+}
+.footer__info-katalog {
+    display: flex;
+    flex-direction: column;
+    // width: 360px;
+
+    p {
+        margin-bottom: 20px;
+        a {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.katalog-link {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.katalog-link-left {
+    margin-right: 40px;
+}
+
+.footerr__info-link {
+    margin-bottom: 15px;
+}
+
+.footer__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.footer__info-contact {
+    margin-left: 120px;
+}
+
+.footer__coll {
+    display: flex;
+    align-items: center;
+}
+
+.coll  {
+    margin-left: 15px;
+
+    a, p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+}
+
+.footer__social-link {
+    display: flex;   
+    align-items: center;
+    justify-content: end;
+    margin-top: 40px;
+}
+
+.footer__menu-link {
+    width: 24px;
+    margin-left: 15px;
+    img {
+        width: 100%;
+        fill: #FFFFFF;
+        fill-opacity: 0;
+
+    }
+}
+
+.footer-line {
+    opacity: 0.3;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0);
+}
+
+.footer__info-under {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px 70px 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+
+    .footer__service {
+        display: flex;
+        p {
+            margin-right: 77px;
+        }
+    }
+}
