@@ -49,9 +49,7 @@
             <div class="menu__nav-link"><span><img src="/images/wall.svg" alt=""></span>
                 <a href="">Акции</a>
             </div>
-            <div class="menu__nav-link"><span><img src="/images/wall.svg" alt=""></span>
-                <a href="">Акции</a>
-            </div>
+
             <div class="menu__nav-link"><span><img src="/images/wall.svg" alt=""></span>
                 <a href="">Кирпич <br> облицовочный</a>
             </div>

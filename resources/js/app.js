@@ -109,11 +109,17 @@ formFilter.addEventListener('click', event => {
 
     if (target.classList.contains('check__span')) {
         const posY = event.pageY;
-        elementPosition.style.top = -(heightBtnFloat / 2)  + posY + "px";
-        elementPosition.style.opacity = 1
+        const posX = event.pageX;
+        elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
+        elementPosition.style.left = 270 + posX + "px";
+        clearTimeout(rowPage)
 
-        clearTimeout (timerId);
+        rowPage = setTimeout( () => {
+            elementPosition.style.opacity = 1
 
+        }, 150)
+
+        clearTimeout(timerId)
         timerId = setTimeout(() => {
             elementPosition.style.opacity = 0
         }, 3000)
