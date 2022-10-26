@@ -36,15 +36,18 @@
 
         <div class="menu__nav">
             <nav class="menu__nav-link katalog" id="nav">
-                <div class="header__burger" id="header__burger">
-                    <span></span>
-
+                <span class="header__burger" id="header__burger">
+                    <span class="burger-line1"></span>
+                    <span class="burger-line2"></span>
+                    <span class="burger-line3"></span>
+                </span>
+                <div class="open__menu">
+                      @include('openMenuHeader')
                 </div>
-                @include('openMenuHeader')
-                <a class="katalog__text" href="">Каталог <br> продукции</a>
+                <a class="katalog__text" href="">Каталог  продукции</a>
             </nav>
             <div class="menu__nav-link"><span><img src="/images/wall.svg" alt=""></span>
-                <a class="action" href="">Акции</a>
+                <a href="">Акции</a>
             </div>
             <div class="menu__nav-link"><span><img src="/images/wall.svg" alt=""></span>
                 <a href="">Кирпич <br> облицовочный</a>

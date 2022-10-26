@@ -11824,7 +11824,6 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__burger, .katalog__text").on("click", function (event) {
     event.preventDefault();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".open__menu").toggleClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#header__burger").toggleClass("active");
   });
 });
@@ -11891,13 +11890,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var LocalStorage = localStorage;
   var formData = {};
   var timerId;
+  var rowPage;
   formFilter.addEventListener('click', function (event) {
     var target = event.target;
 
     if (target.classList.contains('label_elements')) {
       var posY = event.pageY;
+      var posX = event.pageX;
       elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
-      elementPosition.style.opacity = 1;
+      elementPosition.style.left = 270 + posX + "px";
+      clearTimeout(rowPage);
+      rowPage = setTimeout(function () {
+        elementPosition.style.opacity = 1;
+      }, 150);
       clearTimeout(timerId);
       timerId = setTimeout(function () {
         elementPosition.style.opacity = 0;

@@ -5,7 +5,6 @@ import {vModelCheckbox} from "vue";
 $(function () {
     $(".header__burger, .katalog__text").on("click", function (event) {
         event.preventDefault();
-        $(".open__menu").toggleClass("active");
         $("#header__burger").toggleClass("active");
     });
 })
@@ -84,6 +83,7 @@ let formFilter = document.querySelector('#form__filters');
 const LocalStorage = localStorage;
 let formData = {}
 let timerId
+let rowPage
 
 
 formFilter.addEventListener('click', event => {
@@ -91,8 +91,15 @@ formFilter.addEventListener('click', event => {
     if (target.classList.contains('label_elements' )) {
 
         const posY = event.pageY;
+        const posX = event.pageX;
         elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
-        elementPosition.style.opacity = 1
+        elementPosition.style.left = 270 + posX + "px";
+        clearTimeout(rowPage)
+
+        rowPage = setTimeout( () => {
+            elementPosition.style.opacity = 1
+
+        }, 150)
 
         clearTimeout(timerId)
         timerId = setTimeout(() => {
