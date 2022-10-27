@@ -86,14 +86,16 @@ let timerId
 let rowPage
 
 
+
 formFilter.addEventListener('click', event => {
     const target = event.target;
     if (target.classList.contains('label_elements' )) {
 
-        const posY = event.pageY;
-        const posX = event.pageX;
+        const posY = formFilter.offsetTop;
+        const posX = formFilter.offsetLeft;
+        console.log(posX)
         elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
-        elementPosition.style.left = 270 + posX + "px";
+        elementPosition.style.left = 270 + 261 + "px";
         clearTimeout(rowPage)
 
         rowPage = setTimeout( () => {
@@ -108,8 +110,8 @@ formFilter.addEventListener('click', event => {
     }
 
     if (target.classList.contains('check__span')) {
-        const posY = event.pageY;
-        const posX = event.pageX;
+        const posY = obj.offsetTop;
+        const posX = obj.offsetLeft;
         elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
         elementPosition.style.left = 270 + posX + "px";
         clearTimeout(rowPage)
@@ -125,19 +127,6 @@ formFilter.addEventListener('click', event => {
         }, 3000)
     }
 
-    // formData[target.name] = target.value;
-    // LocalStorage.setItem('formData', JSON.stringify(formData))
-    // if (LocalStorage.getItem('formData')) {
-    //     formData = JSON.parse(LocalStorage.getItem('formData'))
-    //     for (let key in formData) {
-    //         if (formFilter.elements[key].type === 'checkbox' && formFilter.element[key].value === 'on') {
-    //             formFilter.element[key].cheked = true;
-    //         }
-    //         else {
-    //             formFilter.elements[key].value = formData[key]
-    //         }
-    //     }
-    // }
     });
 
     formFilter.addEventListener('hover', event => {

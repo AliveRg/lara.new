@@ -1,21 +1,21 @@
 <div class="filters__wrapper">
-    <div class="checkBtnFilters" id="checkBtn">
-        <div class="check__btn-filters-wrapper" id="checkBtnInner">
-            <span><a href="">Показать</a></span>
+    <form name="filters__form" id="form__filters" action="" style = "position: relative">
+        <div class="checkBtnFilters" id="checkBtn">
+            <div class="check__btn-filters-wrapper" id="checkBtnInner">
+                <span><a href="">Показать</a></span>
+            </div>
         </div>
-    </div>
-    <form name="filters__form" id="form__filters" action="">
         <div class="sub__title">Кирпич
             <hr class="hr-line"> <span>Блок</span>
         </div>
 
-        <div class="filters__name"><span id="arrow-1" class="arrow"><img src="/images/arrow.svg"
-                    alt=""></span>
-            <span class="name"> Цена</span>
+        <div class="filters__name">
+            <span id="arrow-1" class="arrow">
+                <img src="/images/arrow.svg" alt="">
+            </span>
+            <span class="name">Цена</span>
 
         </div>
-
-
         <div class="filter__variable-0 filter__variable">
             <div class="checkbox">
                 <input class="custom-checkbox" type="checkbox" id="name-28" name="name-28" value="">

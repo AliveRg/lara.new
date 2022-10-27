@@ -11895,10 +11895,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var target = event.target;
 
     if (target.classList.contains('label_elements')) {
-      var posY = event.pageY;
-      var posX = event.pageX;
+      var posY = formFilter.offsetTop;
+      var posX = formFilter.offsetLeft;
+      console.log(posX);
       elementPosition.style.top = -(heightBtnFloat / 2) + posY + "px";
-      elementPosition.style.left = 270 + posX + "px";
+      elementPosition.style.left = 270 + 261 + "px";
       clearTimeout(rowPage);
       rowPage = setTimeout(function () {
         elementPosition.style.opacity = 1;
@@ -11910,27 +11911,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (target.classList.contains('check__span')) {
-      var _posY = event.pageY;
+      var _posY = obj.offsetTop;
+      var _posX = obj.offsetLeft;
       elementPosition.style.top = -(heightBtnFloat / 2) + _posY + "px";
-      elementPosition.style.opacity = 1;
+      elementPosition.style.left = 270 + _posX + "px";
+      clearTimeout(rowPage);
+      rowPage = setTimeout(function () {
+        elementPosition.style.opacity = 1;
+      }, 150);
       clearTimeout(timerId);
       timerId = setTimeout(function () {
         elementPosition.style.opacity = 0;
       }, 3000);
-    } // formData[target.name] = target.value;
-    // LocalStorage.setItem('formData', JSON.stringify(formData))
-    // if (LocalStorage.getItem('formData')) {
-    //     formData = JSON.parse(LocalStorage.getItem('formData'))
-    //     for (let key in formData) {
-    //         if (formFilter.elements[key].type === 'checkbox' && formFilter.element[key].value === 'on') {
-    //             formFilter.element[key].cheked = true;
-    //         }
-    //         else {
-    //             formFilter.elements[key].value = formData[key]
-    //         }
-    //     }
-    // }
-
+    }
   });
   formFilter.addEventListener('hover', function (event) {
     var target = event.target;
