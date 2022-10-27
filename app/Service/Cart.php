@@ -10,17 +10,26 @@ class Cart
     const CART_SESSION_NAME = 'cart';
 
     private $session;
-    private $cartData;
+    /** @var array|null */
+    private $cartData = null;
 
-    public function __construct(Session $session)
+    public function __construct()
     {
-        $this->session = $session;
+        $this->session = session();
+    }
 
-        $this->cartData = $session->get(self::CART_SESSION_NAME, []);
+    private function loadData()
+    {
+        if ($this->cartData === null) {
+
+            $this->cartData = $this->session->get(self::CART_SESSION_NAME, []);
+        }
     }
 
     public function getProducts(): array
     {
+        $this->loadData();
+
         $pIds = array_keys($this->cartData);
 
         if (count($pIds) === 0) {
@@ -32,6 +41,8 @@ class Cart
 
     public function getProductsData(): array
     {
+        $this->loadData();
+
         $products = $this->getProducts();
 
         return array_map(function(Product $product) {
@@ -48,6 +59,8 @@ class Cart
      */
     public function count(): int
     {
+        $this->loadData();
+
         return count($this->cartData);
     }
 
@@ -56,6 +69,8 @@ class Cart
      */
     public function has(int $id): bool
     {
+        $this->loadData();
+
         return array_key_exists($id, $this->cartData);
     }
 
@@ -64,6 +79,8 @@ class Cart
      */
     public function getAmount(int $id): int
     {
+        $this->loadData();
+
         if ($this->has($id)) {
 
             return $this->cartData[$id]['amount'];
@@ -74,6 +91,8 @@ class Cart
 
     public function add(Product $product, int $amount)
     {
+        $this->loadData();
+
         $this->cartData[$product->id] = [
             'amount' => $amount
         ];
@@ -83,6 +102,8 @@ class Cart
 
     public function remove(Product $product)
     {
+        $this->loadData();
+
         if (isset($this->cartData[$product->id])) {
 
             unset($this->cartData[$product->id]);
@@ -94,5 +115,7 @@ class Cart
     private function save()
     {
         $this->session->push(self::CART_SESSION_NAME, $this->cartData);
+
+        $this->session->save();
     }
 }

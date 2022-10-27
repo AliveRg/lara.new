@@ -20,7 +20,11 @@
     </div>
     <div class="container">
         <div class="menu__info">
-            <div class="logo"><img src="images/logo.svg" alt=""></div>
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.svg" alt="">
+                </a>
+            </div>
             <div class="adress">
                 <div class="adress__ferst">г. Белгород, ул. К.Заслонова, д.183</div>
                 <div class="adress__second">п. Разумное, ул. Школьная, д.76</div>

@@ -16,17 +16,17 @@ class CartController extends Controller
 
     public function add(Request $request, Cart $cart): JsonResponse
     {
-        if (!($request->has('p_id') && $request->query->getInt('p_id'))) {
+        if (!($request->has('p_id') && $request->request->getInt('p_id'))) {
             return $this->failed([ 'p_id' => 'invalid value' ]);
         }
 
-        $productId = $request->query->getInt('p_id');
+        $productId = $request->request->getInt('p_id');
 
         if (!$product = $this->getProduct($productId)) {
             return $this->failed([ 'p_id' => 'product not found' ]);
         }
 
-        if (!($request->query->has('amount') && $request->query->getInt('amount'))) {
+        if (!($request->request->has('amount') && $request->request->getInt('amount'))) {
             return $this->failed([ 'amount' => 'invalid value' ]);
         }
 
@@ -39,7 +39,7 @@ class CartController extends Controller
 
     public function remove(Request $request, Cart $cart): JsonResponse
     {
-        $product = $this->getProduct($request->query->getInt('p_id'));
+        $product = $this->getProduct($request->request->getInt('p_id'));
 
         if (!$product) {
             return $this->failed([ 'p_id' => 'product not found' ]);

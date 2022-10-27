@@ -1,7 +1,6 @@
 import $ from "jquery";
 import {vModelCheckbox} from "vue";
 
-
 $(function () {
     $(".header__burger, .katalog__text").on("click", function (event) {
         event.preventDefault();
