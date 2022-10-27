@@ -1,4 +1,3 @@
-    <div class="open__menu">
         <div class="wrapper-open__menu">
             <div class="open__menu-content open__menu-content-left ">
                 <div class="menu-content menu__content-ferst">Кирпич</div>
@@ -23,4 +22,3 @@
                 </div>
             </div>
         </div>
-    </div>

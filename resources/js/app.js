@@ -4,7 +4,6 @@ import {vModelCheckbox} from "vue";
 $(function () {
     $(".header__burger, .katalog__text").on("click", function (event) {
         event.preventDefault();
-        $(".open__menu").toggleClass("active");
         $("#header__burger").toggleClass("active");
     });
 })
