@@ -22,8 +22,7 @@ Route::post('/cart/add', [CartController::class, 'add']);
 /* {"p_id": 1} */
 Route::post('/cart/remove', [CartController::class, 'remove']);
 
-
-Route::view('/one-goods', 'katalog-one__goods');
+Route::get('/one-goods', [PageController::class, 'onegoods']);
 
 
 

@@ -44,21 +44,9 @@
             @include('filters__form')
             <div class="card__show">
                 <div class="filrets__goods">
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
-                    @include('cards__goods')
+                    @foreach($products as $product)
+                        @include('cards__goods')
+                    @endforeach
                 </div>
 
                 <div class="cards__hub">

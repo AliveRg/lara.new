@@ -1,5 +1,6 @@
 import $ from "jquery";
 import {vModelCheckbox} from "vue";
+const axios = require('axios').default;
 
 $(function () {
     $(".header__burger, .katalog__text").on("click", function (event) {
@@ -141,12 +142,12 @@ document.addEventListener('DOMContentLoaded', function (){
 
 
     const selectSorting = document.querySelector('.select')
-    const selectOpenOption = document.querySelector('.select__body')
+    const selectOpenOption = document.querySelector ('.select__body')
     const selectCurrent = document.querySelector('.select__current')
 
 
     selectSorting.addEventListener('click', (event) => {
-        const target = event.target;
+        const target =event.target ;
         function bodySelectActive () {
             $(".select__body").toggleClass("active");
         }
@@ -165,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function (){
     })
 
 });
+
+
+
 
 
 

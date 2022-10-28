@@ -8,9 +8,16 @@
                     пустотелый
                     облицовочный полуторный соломенный бархат Железногорский</span>
             </div>
-            <div class="filters__title katalog-one__info">
-                <p>Кирпич керамический пустотелый облицовочный полуторный соломенный бархат Железногорский</p>
-            </div>
+                <div class="_product" data-id="{{ $products[0]->id }}">
+                    <div class="filters__title katalog-one__info">
+                        <p>
+                        {{$products[0]->name}}
+                        </p>
+                    </div>
+                </div>
+
+
+
         </div>
         <div class="content__buy">
             <div class="content__buy-img"><img src="/images/scale-goods.png" alt=""></div>
@@ -129,10 +136,9 @@
                         </div>
                     </div>
                     <div class="card__slide-base">
-                        @include('cards__goods')
-                        @include('cards__goods')
-                        @include('cards__goods')
-                        @include('cards__goods')
+                        @foreach($products as $product)
+                            @include('cards__goods')
+                        @endforeach
                     </div>
                 </div>
             </div>
